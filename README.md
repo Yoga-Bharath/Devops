@@ -21,7 +21,10 @@ create a file: nano my_file.txt
 
            
  Commands used to crate task2:
-          create 20 files with .txt extensions: created new directory and created the files.
-          To create multiple files: touch file_{1..20}.txt
-          change the extension to yml:  mv file_1.txt file_1.yml,file_2.txt file_2.yml,file_3.txt file_3.yml,file_4.txt file_4.yml,file_5.txt file_5.yml
-          to list the updated file: ls -lv | head -6
+ create 20 files with .txt extensions: created new directory and created the files.
+ 
+ To create multiple files: touch file_{1..20}.txt
+ 
+ change the extension to yml:  mv file_1.txt file_1.yml,file_2.txt file_2.yml,file_3.txt file_3.yml,file_4.txt file_4.yml,file_5.txt file_5.yml
+ 
+ to list the updated file: ls -lv | head -6
