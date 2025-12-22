@@ -8,12 +8,16 @@ Task Description:
 
   
 Commands used to create the task1:
-           Create a directory - mkdir my_folder
-          To navigate: cd my_folder
-           create a file: nano my_file.txt
+Create a directory - mkdir my_folder
+
+To navigate: cd my_folder
+
+create a file: nano my_file.txt
                           vim another_file.txt
-           To Concatenate the content of ""another_file.txt"" to ""my_file.txt"" and display the updated content: cat my_file.txt >> another_file.txt
-           To list: ls -la
+                          
+ To Concatenate the content of ""another_file.txt"" to ""my_file.txt"" and display the updated content: cat my_file.txt >> another_file.txt
+ 
+ To list: ls -la
 
            
  Commands used to crate task2:
