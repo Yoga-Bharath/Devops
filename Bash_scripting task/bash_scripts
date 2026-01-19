@@ -1,0 +1,30 @@
+Task 1:
+#!/bin/bash
+
+#get the URL from user
+
+read -p "Enter the URL: "  url
+
+#curling the input and filtering the error code and error messages
+
+code=$(curl -s -I $url | head -1 | awk {'print $2'})
+message=$(curl -s -I $url | head -1 | awk {'print $3,$4'})
+
+#printing the value seperately
+
+echo "Error code - $code"
+echo "Error message - $message"
+
+
+Task2:
+#!/bin/bash
+
+num_lines=$(wc -l < /home/yoga/file.txt | awk '{print $1}')
+
+for ((i=1; i<=num_lines; i++)); do
+         if [ $i -ge 5 ]; then
+                if grep -q "Welcome" <(sed -n "${i}p" /home/yoga/file.txt); then
+                   sed -i "${i}s/Give/Learning/" /home/yoga/file.txt
+                fi
+         fi
+done
