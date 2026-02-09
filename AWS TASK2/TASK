@@ -1,0 +1,14 @@
+Task Description:
+
+Set up a VPC with an Internet gateway, create a public subnet with 256 IP addresses, a private subnet with 256 IP addresses, make a route table connecting the Internet gateway and the subnets, and launch a Linux EC2 instance by using the above VPC and public subnet.
+
+Techstacks needs to be used : 
+
+AWS VPC
+AWS EC2
+
+
+Explanation:
+  1. Created VPC ( name - yoga VPC) and created 2 subnets ( name: yoga-subnet-public and yoga-subnet-private ), created the 2 Routetables and associated with private & public subnets.
+    Created Internet gateway and added in the route of the public Route table which is associated with public subnet.
+  2. Created 2 EC2( server1 - with public subnet , server2 - with private subnet), and connected to server1 and tried to access the internet.
