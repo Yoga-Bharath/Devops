@@ -1,0 +1,23 @@
+1.Created local directory and populated as local git repository.
+   --> mkdir guvi task
+   --> cd guvi task
+   --> git init
+   --> touch scripts_{1..3}.sh
+   --> git add .
+   --> git commit -m "Initial commit"
+2.created empty repository in github.
+3.link local repo to remote remo
+   --> git remote add origin https://github.com/Yoga-Bharath/guvi_task.git
+   --> git branch -M main
+   --> git push -u origin main
+4.created branch and merged the files
+   --> git branch test
+   --> edited files and commited to local and pushed to remote repository.
+   --> merged files in the remote repository.
+5.Rebase and stash
+   -->created new file and added to test branch
+   --> git stash
+   --> created new file and committed to the test branch
+   --> git checkout main and checked git log
+   --> git checkout test and checked git log
+   --> git rebase main
