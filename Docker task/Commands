@@ -1,0 +1,40 @@
+Install:
+    sudo yum update -y
+    sudo dnf install docker -y
+    sudo systemctl start docker
+    sudo systemctl enable docker
+    sudo usermod -aG docker ec2-user
+    newgrp docker
+    docker --version
+    docker run hello-world
+    docker run -d -p 80:80 nginx
+    http://13.235.134.109
+Docker Images:
+    docker pull nginx
+    docker images
+    docker rmi nginx
+Container commands:
+    docker run -d -p 80:80 nginx
+    docker ps
+Docker volume:
+     docker volume create myvolume
+     docker volume ls
+     docker volume inspect myvolume
+     docker run -d -v myvolume:/data nginx
+Docker Network:
+     docker network ls
+     docker network create mynetwork
+     docker network ls
+     docker run -d --name web --network mynetwork nginx
+     docker network inspect mynetwork
+Stop container/delete container/remove volume and network
+     docker ps -a
+     docker inspect fe388baa3e24
+     docker stop fe388baa3e24
+     docker rm fe388baa3e24
+     docker volume rm myvolume
+     docker network ls
+     docker network inspect mynetwork
+     docker stop c4980a1fec34c6fc1e5aefa4bc857cff82a6728ef9a0bdc45b22d5ff71cb2ff0
+     docker rm c4980a1fec34c6fc1e5aefa4bc857cff82a6728ef9a0bdc45b22d5ff71cb2ff0
+     docker network rm mynetwork
