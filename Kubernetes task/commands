@@ -1,0 +1,37 @@
+Step 1: Install Docker (Required)
+sudo apt install docker.io
+sudo systemctl start docker
+sudo usermod -aG docker $USER
+Logout and login again.
+
+Step 2: Install Minikube
+curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+sudo install minikube-linux-amd64 /usr/local/bin/minikube
+
+Step 3: Install kubectl
+sudo apt install kubectl
+
+Step 4: Start Minikube
+minikube start --driver=docker
+
+Step 5: Verify Cluster
+minikube version
+kubectl get pods -A
+
+step 6: Create Namespace - Imperative way
+kubectl create ns prod
+kubectl create ns test
+kubectl get ns = list the namespaces
+
+step7: Delete namespace
+kubectl delete test
+kubectl get ns
+
+step8: Create namespace - Declarative way
+create file namesp.yml with below content
+   apiVersion: v1
+   kind: Namespace
+   metadata:
+     name: production
+  kubectl apply -f namesp.yml = create
+  kubectl get ns = list the namespaces
