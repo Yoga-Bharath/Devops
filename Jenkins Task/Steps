@@ -1,0 +1,41 @@
+Task 1: Launch AWS EC2
+   Create an Ubuntu EC2 instance.
+   Configure Security Group:
+   Port 22 (SSH)
+   Port 8080 (Jenkins UI)
+   Connect to the server using SSH.
+Task 2: Install Jenkins
+  sudo apt update -y
+  sudo apt install openjdk-21-jdk -y
+  java -version
+  curl -fsSL https://pkg.jenkins.io/debian-stable/jenkins.io-2026.key | \
+sudo tee /usr/share/keyrings/jenkins-keyring.asc > /dev/null
+  echo "deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] https://pkg.jenkins.io/debian-stable binary/" | \
+sudo tee /etc/apt/sources.list.d/jenkins.list
+   sudo apt update
+   sudo apt install jenkins -y
+    dpkg -l | grep jenkins
+   sudo systemctl enable jenkins
+  sudo systemctl start jenkins
+  sudo systemctl status jenkins
+  sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+  Access - http://13.201.194.216:8080/
+Task3: Create Jenkins Users
+Task4: Create Freestyle project
+   Give - Name & description
+   Build- execute shell
+         echo "================================"
+         echo "Hello from Jenkins"
+         echo "================================"
+
+         hostname
+
+        whoami
+
+        pwd  
+
+        date
+
+        uptime
+ Run the Build.
+         
